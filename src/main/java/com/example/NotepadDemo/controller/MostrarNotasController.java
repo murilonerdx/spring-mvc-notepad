@@ -17,8 +17,8 @@ import java.util.List;
 
 @WebServlet(name = "MostrarNotasController", value = "/mostrar-notas")
 public class MostrarNotasController extends HttpServlet {
+    NotaService service = new NotaService();
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        NotaService service = new NotaService();
         try {
             List<Nota> notas = service.findAllNotas();
             request.setAttribute("notas", notas);
@@ -29,5 +29,18 @@ public class MostrarNotasController extends HttpServlet {
         }
     }
 
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String id = request.getParameter("isWhat");
+        if ("edit".equals(request.getParameter("edit"))) {
+            response.sendRedirect(request.getContextPath() + "/home.jsp");
+        } else if ("delete".equals(request.getParameter("delete"))) {
+            service.deleteById(id);
+            response.sendRedirect(request.getContextPath() + "/home.jsp");
+        }else{
+            response.sendRedirect(request.getContextPath() + "/mostrar-notas.jsp");
+        }
 
+    }
 }
+
+

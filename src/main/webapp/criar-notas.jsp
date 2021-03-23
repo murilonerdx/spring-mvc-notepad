@@ -43,14 +43,14 @@
                 <div class="mark-header">
 
                     <div class="col-md-12">
-                        <div class="btn-group" role="group"><button class="btn btn-primary border rounded-0 d-lg-flex" type="submit" style="margin-right: 3px;background-color: #35aa47;">Salvar</button><button class="btn btn-primary" type="submit" style="background-color: #f0f0f0;color: #0b0b0b;">Fechar</button></div>
+                        <div class="btn-group" role="group"><button class="btn btn-primary border rounded-0 d-lg-flex" type="submit" style="margin-right: 3px;background-color: #35aa47;">Salvar</button><a href="${pageContext.request.contextPath}/mostrar-notas" class="btn btn-primary" type="button" style="background-color: #f0f0f0;color: #0b0b0b;">Mostrar notas</a></div>
                     </div>
                 </div>
                 <div class="row mark-panel">
                     <div class="col edit-inner">
-                        <textarea name="textTitulo" class="d-inline float-start d-lg-flex justify-content-lg-start mark-title" id="mark_title" placeholder="Coloque o titulo"></textarea>
-                        <textarea name="textAssunto" class="d-inline float-start d-lg-flex justify-content-md-start mark-header" placeholder="Coloque o assunto"></textarea>
-                        <textarea name="textCampo" class="form-control-lg mark-edit" id="mark_edit" placeholder="Digite o seu texto"></textarea></div>
+                        <textarea name="textTitulo" class="d-inline float-start d-lg-flex justify-content-lg-start mark-title" id="mark_title" placeholder="Coloque o titulo" required></textarea>
+                        <textarea name="textAssunto" class="d-inline float-start d-lg-flex justify-content-md-start mark-header" placeholder="Coloque o assunto" required></textarea>
+                        <textarea name="textCampo" class="form-control-lg mark-edit" id="mark_edit" placeholder="Digite o seu texto" required></textarea></div>
                 </div>
             </section>
             </form>

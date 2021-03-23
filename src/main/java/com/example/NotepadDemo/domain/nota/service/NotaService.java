@@ -23,8 +23,8 @@ public class NotaService {
 
         while(resultado.next()) {
             int id = resultado.getInt("id");
-            String titulo = resultado.getString("titulo");
-            String assunto = resultado.getString("assunto");
+            String titulo = resultado.getString("ds_titulo");
+            String assunto = resultado.getString("ds_assunto");
 
             notas.add(new Nota(id,titulo, assunto,null));
         }
@@ -40,15 +40,14 @@ public class NotaService {
         try{
             Connection conexao = DbService.getConexao();
 
-            String sql = "INSERT INTO NOTAS VALUES(?,?,?,?,?)";
+            String sql = "INSERT INTO NOTAS VALUES(default,?,?,?,?)";
             PreparedStatement stmt = conexao.prepareStatement(sql);
-            stmt.setInt(1, obj.getId());
-            stmt.setString(2, obj.getTitulo());
-            stmt.setString(3, obj.getAssunto());
-            stmt.setString(4, obj.getTexto());
-            stmt.setString(5, String.valueOf(obj.getData()));
+            stmt.setString(1, obj.getTitulo());
+            stmt.setString(2, obj.getAssunto());
+            stmt.setString(3, obj.getTexto());
+            stmt.setString(4, String.valueOf(obj.getData()));
 
-            stmt.execute();
+            stmt.executeUpdate();
             conexao.close();
             stmt.close();
 
@@ -75,7 +74,22 @@ public class NotaService {
         stmt.close();
         conexao.close();
         return contador + 1;
+    }
 
+    public void deleteById(String id){
+        try{
+            Connection conexao = DbService.getConexao();
 
+            String sql = "DELETE FROM NOTAS WHERE id=?";
+            PreparedStatement stmt = conexao.prepareStatement(sql);
+            stmt.setInt(1, Integer.parseInt(id));
+
+            stmt.execute();
+            conexao.close();
+            stmt.close();
+
+        }catch(RuntimeException | SQLException e){
+            e.printStackTrace();
+        }
     }
 }
