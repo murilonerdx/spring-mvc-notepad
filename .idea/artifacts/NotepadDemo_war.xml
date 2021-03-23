@@ -1,0 +1,27 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="NotepadDemo:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>NotepadDemo</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="NotepadDemo-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="NotepadDemo:war exploded" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="jstl-impl-1.2" />
+          <element id="library" level="project" name="postgresql-42.2.19" />
+          <element id="library" level="project" name="postgresql-42.2.19.jre7" />
+          <element id="library" level="project" name="taglibs-standard-impl-1.2.5" />
+          <element id="library" level="project" name="taglibs-standard-jstlel-1.2.5" />
+          <element id="library" level="project" name="taglibs-standard-spec-1.2.5" />
+        </element>
+        <element id="directory" name="classes">
+          <element id="jpa-descriptors" facet="NotepadDemo/jpa/JPA" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
