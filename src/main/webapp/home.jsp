@@ -20,8 +20,6 @@
     <style><%@include file="WEB-INF/assets/fonts/fontawesome5-overrides.min.css"%></style>
     <style><%@include file="WEB-INF/assets/css/Sidebar-Menu-1.css"%></style>
     <style><%@include file="WEB-INF/assets/css/Sidebar-Menu.css"%></style>
-
-
 </head>
 
 <body>
@@ -30,7 +28,7 @@
         <ul class="sidebar-nav">
             <li class="sidebar-brand"> <a href="#">Inicio</a></li>
             <li> </li>
-            <li> <a href="#">Criar notas</a></li>
+            <li> <a href="${pageContext.request.contextPath}/criar-notas.jsp">Criar notas</a></li>
             <li> <a href="${pageContext.request.contextPath}/mostrar-notas">Minhas notas</a></li>
         </ul>
     </div>

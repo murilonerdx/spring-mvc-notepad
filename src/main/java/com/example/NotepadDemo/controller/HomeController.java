@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-@WebServlet(name = "HomeController", value = "/home")
+@WebServlet(name = "HomeController", value = "/Home")
 public class HomeController extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         if (request.getSession().getAttribute("usuarioLogado") != null) {
@@ -21,5 +21,7 @@ public class HomeController extends HttpServlet {
             response.sendRedirect(request.getContextPath() + "/");
         }
     }
+
+
 
 }

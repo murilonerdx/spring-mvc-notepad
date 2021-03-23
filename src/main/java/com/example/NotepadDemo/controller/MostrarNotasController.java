@@ -27,8 +27,7 @@ public class MostrarNotasController extends HttpServlet {
         } catch (SQLException | ServletException throwables) {
             throwables.printStackTrace();
         }
-
-
-
     }
+
+
 }

@@ -33,4 +33,48 @@ public class NotaService {
 
 
     }
+
+    public void insertNota(Nota obj) throws SQLException {
+//        insert into notas values(2, 'titulo','assunto','texto', 'data')
+        try{
+            Connection conexao = DbService.getConexao();
+
+            String sql = "INSERT INTO NOTAS VALUES(?,?,?,?,?)";
+            PreparedStatement stmt = conexao.prepareStatement(sql);
+            stmt.setInt(1, obj.getId());
+            stmt.setString(2, obj.getTitulo());
+            stmt.setString(3, obj.getAssunto());
+            stmt.setString(4, obj.getTexto());
+            stmt.setString(5, String.valueOf(obj.getData()));
+
+            stmt.execute();
+            conexao.close();
+            stmt.close();
+
+        }catch(RuntimeException e){
+            e.printStackTrace();
+        }
+
+
+
+    }
+
+    public Integer findId() throws SQLException {
+        String sql = "select * from notas";
+        Connection conexao = DbService.getConexao();
+
+        Statement stmt = conexao.createStatement();
+        ResultSet resultado = stmt.executeQuery(sql);
+
+        Integer contador = 0;
+
+        while(resultado.next()) {
+            contador += 1;
+        }
+        stmt.close();
+        conexao.close();
+        return contador + 1;
+
+
+    }
 }
