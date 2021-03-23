@@ -23,13 +23,13 @@
     </welcome-file-list>
 
     <servlet-mapping>
-        <servlet-name>NotaController</servlet-name>
-        <url-pattern>/minhas-notas</url-pattern>
+        <servlet-name>CriarNotaController</servlet-name>
+        <url-pattern>/criar-notas</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>NotaController</servlet-name>
-        <servlet-class>com.example.NotepadDemo.controller.NotaController</servlet-class>
+        <servlet-name>CriarNotaController</servlet-name>
+        <servlet-class>com.example.NotepadDemo.controller.CriarNotaController</servlet-class>
     </servlet>
 
     <servlet-mapping>

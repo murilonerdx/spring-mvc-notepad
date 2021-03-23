@@ -14,17 +14,16 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Notepad</title>
-    <style><%@include file="WEB-INF/assets/bootstrap/css/bootstrap.min.css"%></style>
-    <style><%@include file="WEB-INF/assets/fonts/fontawesome-all.min.css"%></style>
-    <style><%@include file="WEB-INF/assets/fonts/font-awesome.min.css"%></style>
-    <style><%@include file="WEB-INF/assets/css/styles.css"%></style>
-    <style><%@include file="WEB-INF/assets/fonts/fontawesome5-overrides.min.css"%></style>
-    <style><%@include file="WEB-INF/assets/css/Sidebar-Menu-1.css"%></style>
-    <style><%@include file="WEB-INF/assets/css/Sidebar-Menu.css"%></style>
-    <style><%@include file="WEB-INF/assets/css/NZButtonSaveClose.css"%></style>
-    <style><%@include file="WEB-INF/assets/css/Lista-Productos-Canito.css"%></style>
+    <style><%@include file="./WEB-INF/assets/bootstrap/css/bootstrap.min.css"%></style>
+    <style><%@include file="./WEB-INF/assets/fonts/fontawesome-all.min.css"%></style>
+    <style><%@include file="./WEB-INF/assets/fonts/font-awesome.min.css"%></style>
+    <style><%@include file="./WEB-INF/assets/css/styles.css"%></style>
+    <style><%@include file="./WEB-INF/assets/fonts/fontawesome5-overrides.min.css"%></style>
+    <style><%@include file="./WEB-INF/assets/css/Sidebar-Menu-1.css"%></style>
+    <style><%@include file="./WEB-INF/assets/css/Sidebar-Menu.css"%></style>
+    <style><%@include file="./WEB-INF/assets/css/NZButtonSaveClose.css"%></style>
+    <style><%@include file="./WEB-INF/assets/css/Lista-Productos-Canito.css"%></style>
 
 </head>
 
@@ -60,8 +59,8 @@
                             <td><c:out value="${item.id}" /></td>
                             <td><c:out value="${item.titulo}" /></td>
                             <td><c:out value="${item.assunto}" /></td>
-                            <td><button type="button" class="btn btn-danger"><i class="fas fa-trash-alt d-xl-flex justify-content-xl-center align-items-xl-center"></i></button>
-                                <button type="button" class="btn btn-warning"><i class="fas fa-pencil-alt d-xl-flex justify-content-xl-center align-items-xl-center"></i></button>
+                            <td><button type="button" class="btn btn-warning">Editar</button>
+                                <button type="button" class="btn btn-danger">Excluir</button>
                             </td>
                         </tr>
                     </c:forEach>
