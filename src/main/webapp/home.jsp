@@ -13,7 +13,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Notepad</title>
-
     <style><%@include file="WEB-INF/assets/bootstrap/css/bootstrap.min.css"%></style>
     <style><%@include file="WEB-INF/assets/fonts/fontawesome-all.min.css"%></style>
     <style><%@include file="WEB-INF/assets/fonts/font-awesome.min.css"%></style>

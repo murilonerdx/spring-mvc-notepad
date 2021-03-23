@@ -32,7 +32,7 @@
     <ul class="sidebar-nav">
         <li class="sidebar-brand"> <a href="${pageContext.request.contextPath}/home.jsp">Inicio</a></li>
         <li> </li>
-        <li> <a href="#">Criar notas</a></li>
+        <li> <a href="criar-notas.jsp">Criar notas</a></li>
         <li> <a href="#">Minhas notas</a></li>
     </ul>
 </div>
@@ -70,7 +70,7 @@
         </div>
     </div>
 </div>
-<script><%@include file="WEB-INF/assets/bootstrap/js/bootstrap.min.js"%></script>
+<<script><%@include file="WEB-INF/assets/bootstrap/js/bootstrap.min.js"%></script>
 <script><%@include file="WEB-INF/assets/js/Sidebar-Menu.js"%></script>
 </body>
 

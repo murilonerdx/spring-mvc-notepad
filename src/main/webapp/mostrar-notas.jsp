@@ -70,7 +70,7 @@
         </div>
     </div>
 </div>
-<script><%@include file="WEB-INF/assets/bootstrap/js/bootstrap.min.js"%></script>
+<<script><%@include file="WEB-INF/assets/bootstrap/js/bootstrap.min.js"%></script>
 <script><%@include file="WEB-INF/assets/js/Sidebar-Menu.js"%></script>
 </body>
 
