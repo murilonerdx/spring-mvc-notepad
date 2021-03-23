@@ -25,10 +25,11 @@ public class CriarNotaController extends HttpServlet {
             NotaService service = new NotaService();
             String titulo = request.getParameter("textTitulo");
             String texto = request.getParameter("textCampo");
+            String assunto = request.getParameter("textAssunto");
 
             nota.setTitulo(titulo);
             nota.setTexto(texto);
-            nota.setAssunto(titulo);
+            nota.setAssunto(assunto);
             nota.setId(service.findId());
             nota.setData(LocalDate.now());
 

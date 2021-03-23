@@ -47,7 +47,10 @@
                     </div>
                 </div>
                 <div class="row mark-panel">
-                    <div class="col edit-inner"><textarea name="textTitulo" class="d-inline float-start d-lg-flex justify-content-lg-start mark-title" id="mark_title" placeholder="Coloque o titulo"></textarea><textarea name="textCampo" class="form-control-lg mark-edit" id="mark_edit"></textarea></div>
+                    <div class="col edit-inner">
+                        <textarea name="textTitulo" class="d-inline float-start d-lg-flex justify-content-lg-start mark-title" id="mark_title" placeholder="Coloque o titulo"></textarea>
+                        <textarea name="textAssunto" class="d-inline float-start d-lg-flex justify-content-md-start mark-header" placeholder="Coloque o assunto"></textarea>
+                        <textarea name="textCampo" class="form-control-lg mark-edit" id="mark_edit" placeholder="Digite o seu texto"></textarea></div>
                 </div>
             </section>
             </form>

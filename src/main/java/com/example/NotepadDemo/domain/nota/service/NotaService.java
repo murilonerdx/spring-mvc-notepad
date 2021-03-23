@@ -25,6 +25,7 @@ public class NotaService {
             int id = resultado.getInt("id");
             String titulo = resultado.getString("titulo");
             String assunto = resultado.getString("assunto");
+
             notas.add(new Nota(id,titulo, assunto,null));
         }
         stmt.close();
